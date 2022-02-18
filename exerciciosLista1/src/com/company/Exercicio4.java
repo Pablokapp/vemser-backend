@@ -14,8 +14,10 @@ public class Exercicio4 {
                 switch (cidadeEscolhida) {
                     case 1:
                         System.out.println("A população de Porto Alegre é de 1.492.530 pessoas." + "\n" + "A principal festa é a Semana Farroupilha" + "\n" + "o IDH de Porto Alegre é: 0,805");
+                        break;
                     case 2:
                         System.out.println("A população de Gravatai é de 285.564 pessoas." + "\n" + "A principal festa é a Nossa Senhora dos Anjos" + "\n" + "o IDH de Gravatai é: 0,862");
+                        break;
                 }
                 break;
 
@@ -25,8 +27,10 @@ public class Exercicio4 {
                 switch (cidadeEscolhida) {
                     case 1:
                         System.out.println("A população de São Gonçalo é de 1.098.357 pessoas." + "\n" + "A principal festa é o aniversário da emancipação do município, que é comemorado no dia 22 de setembro" + "\n" + "o IDH de São Gonçalo é: 0,739");
+                        break;
                     case 2:
                         System.out.println("A população de Duque de Caxias é de 929.449 pessoas." + "\n" + "A principal festa é o Dia da emancipação do município de Duque de Caxias " + "\n" + "o IDH de Gravatai é: 0,711");
+                        break;
 
                 }
                 break;
@@ -36,8 +40,10 @@ public class Exercicio4 {
                 switch (cidadeEscolhida) {
                     case 1:
                         System.out.println("A população de São Guarulhos é de 1.404.694  pessoas." + "\n" + "A principal festa é o Aniversário de Guarulhos, que é comemorado no dia 08 de dezembro" + "\n" + "o IDH de São Gonçalo é: 0,739");
+                        break;
                     case 2:
                         System.out.println("A população de Campinas é de 1.223.237 pessoas." + "\n" + "A principal festa é o dia de Nossa Senhora da Conceição, padroeira municipal, comemorado em 8 de dezembro" + "\n" + "o IDH de Campinas é: 0,805");
+                        break;
 
                 }
                 break;

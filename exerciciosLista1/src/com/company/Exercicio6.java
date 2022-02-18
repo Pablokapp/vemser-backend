@@ -1,28 +1,29 @@
 package com.company;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio6 {
     public static void main(String[] args){
         System.out.println("Digite a palavra para traduzir: ");
-         String palavra = new Scanner(System.in).next();
+         String palavra = new Scanner(System.in).next().toLowerCase(Locale.ROOT);
 
          switch (palavra){
 
-             case "Cachorro":
-                 System.out.println("Dog");
+             case "cachorro" , "dog":
+                 System.out.println("Dog = Cachorro");
                  break;
-             case "Tempo":
-                 System.out.println("Time");
+             case "tempo" , "time":
+                 System.out.println("Time = Tempo");
                  break;
-             case "Amor":
-                 System.out.println("Love");
+             case "amor"," love":
+                 System.out.println("Love = Amor");
                  break;
-             case "Cidade":
-                 System.out.println("City");
+             case "cidade", "city":
+                 System.out.println("City = Cidade");
                  break;
-             case "Feliz":
-                 System.out.println("Happy");
+             case "feliz", "happy":
+                 System.out.println("Happy = Feliz");
                  break;
              default:
                  System.out.println("Essa palavra não é válida.");

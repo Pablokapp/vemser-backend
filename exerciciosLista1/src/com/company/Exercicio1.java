@@ -5,20 +5,22 @@ import java.util.Scanner;
 public class Exercicio1 {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Qual seu nome? ");
-        String nome = new Scanner(System.in).nextLine();
+        String nome = scanner.nextLine();
 
         System.out.println("Quantos anos você tem? ");
-        int idade = new Scanner(System.in).nextInt();
+        int idade = scanner.nextInt();
 
         System.out.println("Qual sua cidade? ");
-        String cidade = new Scanner(System.in).next();
+        String cidade = scanner.nextLine();
 
         System.out.println("Qual seu estado ?");
-        String estado = new Scanner(System.in).nextLine();
+        String estado = scanner.nextLine();
 
         System.out.println("Olá seu nome é " + nome + " você tem " +idade+
                 " anos, " + "é da cidade de "+cidade+" situada no estado " + estado);
 
+        scanner.close();
     }
 }
