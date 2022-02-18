@@ -20,9 +20,9 @@ public class Exercicio4 {
         int menor = 0;
         for (int i = 1;i<numeros.length;i++ ){
             if(numeros[i]<numeros[i-1]){
-                menor = numeros[i];
+                menor = i;
             }
         }
-        System.out.println("o menor número é: "+menor);
+        System.out.println("a posição do menor número é: "+menor);
     }
 }

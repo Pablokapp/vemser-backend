@@ -2,8 +2,9 @@ package com.company;
 
 public class Pessoa {
     String nome;
+    String sobreNome;
     int idade;
-    Telefone telefone;
+    String Whatsapp;
 
 
     public void imprimirNome(){
@@ -24,8 +25,8 @@ public class Pessoa {
     }
 
 
-    public void mandarWhatsapp (String mensagem, Telefone telefone){
-        System.out.println("telefone " + telefone + " Recebeu "+ mensagem + "de" + this.telefone);
+    public void mandarWhatsapp (Pessoa pessoa, String mensagem){
+        System.out.println("telefone " + telefone + " Recebeu "+ mensagem + "de" + this);
     }
 
 
