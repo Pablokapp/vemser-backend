@@ -13,6 +13,7 @@ public class Exercicio7 {
             int y = new Random().nextInt(1, 15);
             vetor[i][0] = x;
             vetor[0][i] = y;
+
             if(vetor[i][0] > 10){
                 maiorQueDez = maiorQueDez + 1 ;
                 System.out.println(vetor[i][0]);

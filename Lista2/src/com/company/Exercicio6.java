@@ -13,6 +13,7 @@ public class Exercicio6 {
         boolean numeroEncontrado = false;
 
         int[] vetor = new int[10];
+
         for(int i = 0; i<10;i++){
             int numero = random.nextInt(1, 10);
             vetor[i] = numero;

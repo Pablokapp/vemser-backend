@@ -49,6 +49,7 @@ public class Exercicio3semmatriz {
             jogadoresCadastrados += 1;
 
             } while (!nome.equalsIgnoreCase("sair"));
+
         System.out.println("Quantidade de jogadores cadastrados: "+jogadoresCadastrados);
         System.out.println("Altura do maior jogador: "+alturaDoMaiorJogador);
         System.out.println("Jogador mais velho: "+nomeDoJogadorMaisVelho + "tem "+jogadorMaisVelho+" anos");
