@@ -1,7 +1,5 @@
 package com.company;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class ContaCorrente {
     Cliente cliente;
     String numeroConta;
@@ -15,16 +13,11 @@ public class ContaCorrente {
         this.agencia = agencia;
         this.saldo = saldo;
         this.chequeEspecial = chequeEspecial;
-
     }
-
-
     public void imprimirContaCorrente() {
         System.out.println("o número da conta corrente é: " + this.numeroConta);
     }
-
     public boolean sacar(double valor) {
-
        if(valor > 0){
            if (valor < retornarSaldoComChequeEspecial()) {
                if(valor < saldo){
@@ -41,8 +34,6 @@ public class ContaCorrente {
 
         return false;
     }
-
-
 
     public boolean depositar(double valor) {
         if (valor > 0) {

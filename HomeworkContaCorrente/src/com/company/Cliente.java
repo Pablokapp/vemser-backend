@@ -1,13 +1,9 @@
 package com.company;
-
-import java.util.Arrays;
-
 public class Cliente {
     String nome;
     String cpf;
     Contato contatos[] = new Contato[2];
     Endereco enderecos[] = new Endereco[2];
-
 
     public Cliente(String nome, String cpf, String descricaoContato1, String telefoneContato1, int tipoContato1,
                    String descricaoContato2, String telefoneContato2, int tipoContato2,
@@ -17,36 +13,25 @@ public class Cliente {
                    String cidadeEnd2, String estadoEnd2, String paisEnd2) {
         this.nome = nome;
         this.cpf = cpf;
-        this.contatos[0] = new Contato(descricaoContato1,telefoneContato1,tipoContato1);
-        this.contatos[1] = new Contato(descricaoContato2,telefoneContato2,tipoContato2);
-        this.enderecos[0] = new Endereco(tipoEndereco1,logradouroEnd1,numEnd1,complementoEnd1,cepEnd1,
-                cidadeEnd1,estadoEnd1, paisEnd1);
-        this.enderecos[1] = new Endereco(tipoEndereco2,logradouroEnd2,numEnd2,complementoEnd2,cepEnd2,
-                cidadeEnd2,estadoEnd2, paisEnd2);
+        this.contatos[0] = new Contato(descricaoContato1, telefoneContato1, tipoContato1);
+        this.contatos[1] = new Contato(descricaoContato2, telefoneContato2, tipoContato2);
+        this.enderecos[0] = new Endereco(tipoEndereco1, logradouroEnd1, numEnd1, complementoEnd1, cepEnd1,
+                cidadeEnd1, estadoEnd1, paisEnd1);
+        this.enderecos[1] = new Endereco(tipoEndereco2, logradouroEnd2, numEnd2, complementoEnd2, cepEnd2,
+                cidadeEnd2, estadoEnd2, paisEnd2);
     }
+    public void imprimirContatos() {
+        System.out.println("Contato 1: " + (contatos[0].descricao + " " + contatos[0].telefone + " " + contatos[0].tipo + "\n" +
+                "Contato 1: " + (contatos[1].descricao + " " + contatos[1].telefone + " " + contatos[1].tipo)));
+    }
+    public void imprimirEnderecos() {
+        if()
 
 
-    public void imprimirContatos(){
-        System.out.println("Contato 1: "+(contatos[0].descricao+" "+contatos[0].telefone+" " +contatos[0].tipo+"\n"+
-                "Contato 1: "+(contatos[1].descricao+" "+contatos[1].telefone+" " +contatos[1].tipo)));
-   }
-public void imprimirEndereco(){
-    System.out.println("Endereço 1: "+"tipo " +enderecos[0].tipo+ " logradouro: " +enderecos[0].logradouro+ " número: "+enderecos[0].numero+"\n"+" complemento: "+
-            enderecos[0].complemento+ " cep: "+enderecos[0].cep+ " cidade: "+enderecos[0].cidade+" estado: "+enderecos[0].estado+ "pais: "+enderecos[0].pais);
-
-    System.out.println("Endereço 2: "+"tipo " +enderecos[1].tipo+ " logradouro: " +enderecos[1].logradouro+ " número: "+enderecos[1].numero+"\n"+" complemento: "+
-            enderecos[1].complemento+ " cep: "+enderecos[1].cep+ " cidade: "+enderecos[1].cidade+" estado: "+enderecos[1].estado+ "pais: "+enderecos[1].pais);
-}
-
-
-public void imprimirCliente(){
-    System.out.println("nome: "+this.nome+ "cpf: "+this.cpf);
-    this.imprimirContatos();
-    this.imprimirEndereco();
-}
-
-
-
-
-
+    }
+    public void imprimirCliente() {
+        System.out.println("nome: " + this.nome + "cpf: " + this.cpf);
+        this.imprimirContatos();
+        this.imprimirEnderecos();
+    }
 }
