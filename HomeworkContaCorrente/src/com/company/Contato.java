@@ -3,7 +3,7 @@ package com.company;
 public class Contato {
     String descricao;
     String telefone;
-    int tipo =1; //1 - resedencial 2- comercial
+    int tipo; //1 - resedencial 2- comercial
 
     public Contato(String descricao, String telefone, int tipo){
         this.descricao = descricao;

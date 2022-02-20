@@ -8,6 +8,7 @@ public class Cliente {
     Contato contatos[] = new Contato[2];
     Endereco enderecos[] = new Endereco[2];
 
+
     public Cliente(String nome, String cpf, String descricaoContato1, String telefoneContato1, int tipoContato1,
                    String descricaoContato2, String telefoneContato2, int tipoContato2,
                    int tipoEndereco1, String logradouroEnd1, int numEnd1, String complementoEnd1, String cepEnd1,
