@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula2/Aula2.iml" filepath="$PROJECT_DIR$/Aulas/Aula2/Aula2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/Aula3/Aula3.iml" filepath="$PROJECT_DIR$/Aulas/Aula3/Aula3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExercicioAula3/ExercicioAula3.iml" filepath="$PROJECT_DIR$/ExercicioAula3/ExercicioAula3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HomeworkContaCorrente/HomeworkContaCorrente.iml" filepath="$PROJECT_DIR$/HomeworkContaCorrente/HomeworkContaCorrente.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lista2/Lista2.iml" filepath="$PROJECT_DIR$/Lista2/Lista2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula1/aula1.iml" filepath="$PROJECT_DIR$/Aulas/aula1/aula1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aulas/aula4/aula4.iml" filepath="$PROJECT_DIR$/Aulas/aula4/aula4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exerciciosLista1/exerciciosLista1.iml" filepath="$PROJECT_DIR$/exerciciosLista1/exerciciosLista1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lista1/lista1.iml" filepath="$PROJECT_DIR$/lista1/lista1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vemser-backend.iml" filepath="$PROJECT_DIR$/.idea/vemser-backend.iml" />
+    </modules>
+  </component>
+</project>

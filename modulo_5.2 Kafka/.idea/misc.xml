@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/kafka/Consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/produtor/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/Consumer2/pom.xml" />
+        <option value="$PROJECT_DIR$/kafka/ConsumerAll/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/ConsumerAll/pom.xml" />
+        <option value="$PROJECT_DIR$/Consumer2/pom.xml" />
+        <option value="$PROJECT_DIR$/produtor/pom.xml" />
+        <option value="$PROJECT_DIR$/produtor-consumidor/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>
