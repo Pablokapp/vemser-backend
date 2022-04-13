@@ -17,6 +17,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -44,6 +45,25 @@ public class ProducerService {
 
     }
 
+    public void sendReturn(String usuario) throws JsonProcessingException {
+        String mensagem = "Mensagem enviada recebida pelo usuário Pablo";
+
+        ProdutorDTO produtorDTO = ProdutorDTO.builder()
+                .mensagem(mensagem)
+                .dataCriacao(LocalDateTime.now())
+                .usuario(clientId)
+                .build();
+
+        String payload = objectMapper.writeValueAsString(produtorDTO);
+
+        send(payload, "chat-"+usuario);
+
+    }
+
+
+
+
+
     private void send(String mensagem, String chat)  {
             Message<String> message = MessageBuilder.withPayload(mensagem)
                     .setHeader(KafkaHeaders.TOPIC, chat)
@@ -64,6 +84,5 @@ public class ProducerService {
                 }
             });
     }
-
 
 }

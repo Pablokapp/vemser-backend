@@ -1,8 +1,5 @@
 package com.dbc.chatkafka.enums;
 
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.List;
 
 public enum Topicos {
     CHAT_ANA("chat-ana"),
@@ -31,6 +28,8 @@ public enum Topicos {
 
 
 
-    }
+
+}
+
 
 

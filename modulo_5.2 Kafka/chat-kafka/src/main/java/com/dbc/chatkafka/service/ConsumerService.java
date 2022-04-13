@@ -54,7 +54,12 @@ public class ConsumerService {
                         @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
         ProdutorDTO produtorDTO = objectMapper.readValue(message, ProdutorDTO.class);
         String data = produtorDTO.getDataCriacao().format(formatter);
-        
+
+
+        if (!produtorDTO.getUsuario().equals("${kafka.client-id}")) {
+            producerService.sendReturn(produtorDTO.getUsuario());
+        }
+
 
         System.out.println(data + " [" + produtorDTO.getUsuario() + "] (privada): "  + produtorDTO.getMensagem());
         log.info("#### offset -> '{}' key -> '{}' -> Consumed Object message -> '{}'  ", offset, key, message);
