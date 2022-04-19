@@ -32,6 +32,8 @@ public class ProducerService {
     @Value(value = "${kafka.client-id}")
     private String clientId;
 
+
+
     public void sendMessage(String mensagem, List<Topicos> chats) throws JsonProcessingException {
         ProdutorDTO produtorDTO = ProdutorDTO.builder()
                 .mensagem(mensagem)
@@ -40,12 +42,12 @@ public class ProducerService {
                 .build();
         String payload = objectMapper.writeValueAsString(produtorDTO);
         for (Topicos chat : chats) {
-            send(payload, chat.getChatName());
+            send(payload, chat.ordinal());
         }
 
     }
 
-    public void sendReturn(String usuario) throws JsonProcessingException {
+    public void sendReturn(String usuario, Integer partition) throws JsonProcessingException {
         String mensagem = "Mensagem enviada recebida pelo usuário Pablo";
 
         ProdutorDTO produtorDTO = ProdutorDTO.builder()
@@ -56,7 +58,7 @@ public class ProducerService {
 
         String payload = objectMapper.writeValueAsString(produtorDTO);
 
-        send(payload, "chat-"+usuario);
+        send(payload, partition);
 
     }
 
@@ -64,11 +66,11 @@ public class ProducerService {
 
 
 
-    private void send(String mensagem, String chat)  {
+    private void send(String mensagem, Integer partition) {
             Message<String> message = MessageBuilder.withPayload(mensagem)
-                    .setHeader(KafkaHeaders.TOPIC, chat)
+                    .setHeader(KafkaHeaders.TOPIC, "chat-marcar-churrasco")
                     .setHeader(KafkaHeaders.MESSAGE_KEY, UUID.randomUUID().toString())
-                    setHeader
+                    .setHeader(KafkaHeaders.PARTITION_ID, partition)
 
                     .build();
 
@@ -77,7 +79,7 @@ public class ProducerService {
             future.addCallback(new ListenableFutureCallback<>() {
                 @Override
                 public void onSuccess(SendResult result) {
-                    log.info(" Log enviado para o kafka com o texto: {} , e para o tópico: {}", mensagem, chat);
+                    log.info(" Log enviado para o kafka com o texto: {} , e para o tópico: {}", mensagem);
                 }
 
                 @Override

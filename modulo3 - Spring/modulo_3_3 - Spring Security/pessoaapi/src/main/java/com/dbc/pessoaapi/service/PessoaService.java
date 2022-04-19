@@ -19,6 +19,8 @@ public class PessoaService {
 
     @Autowired
     private PessoaRepository pessoaRepository;
+    @Autowired
+    private EmailService emailService;
 
     @Autowired
     private ObjectMapper objectMapper;
@@ -26,6 +28,7 @@ public class PessoaService {
     public PessoaDTO create(PessoaCreateDTO pessoa) throws Exception {
         PessoaEntity pessoaEntity = objectMapper.convertValue(pessoa, PessoaEntity.class);
         pessoaRepository.save(pessoaEntity);
+        emailService.sendEmail();
         return objectMapper.convertValue(pessoaEntity, PessoaDTO.class);
     }
 

@@ -32,13 +32,17 @@ public class ConsumerService {
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
     @KafkaListener(
-            topicPartitions = @TopicPartition(topic = "${kafka.topaic.geral-chat}", partitions = {"0"}),
+            topicPartitions = @TopicPartition(topic = "chat-marcar-churrasco", partitions = {"0"}),
             groupId = "${kafka.group-id}",
             containerFactory = "listenerContainerFactory",
             clientIdPrefix = "geral")
     public void consumeChatGeral(@Payload String message,
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
-                        @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
+                        @Header(KafkaHeaders.OFFSET) Long offset,
+                        @Header(KafkaHeaders.RECEIVED_PARTITION_ID) Integer partitionId,
+                        @Header(KafkaHeaders.RECEIVED_TOPIC) String topic
+    ) throws JsonProcessingException {
+
         ProdutorDTO produtorDTO = objectMapper.readValue(message, ProdutorDTO.class);
         String data = produtorDTO.getDataCriacao().format(formatter);
         System.out.println(data + " [" + produtorDTO.getUsuario() + "] "  + produtorDTO.getMensagem());
@@ -46,19 +50,22 @@ public class ConsumerService {
     }
 
     @KafkaListener(
-            topics = "${kafka.topic.meu-chat}",
+            topicPartitions = @TopicPartition(topic = "chat-marcar-churrasco", partitions = {"13"}),
             groupId = "${kafka.group-id}",
             containerFactory = "listenerContainerFactory",
             clientIdPrefix = "private")
     public void consumeMyChat(@Payload String message,
                         @Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) String key,
-                        @Header(KafkaHeaders.OFFSET) Long offset) throws JsonProcessingException {
+                        @Header(KafkaHeaders.OFFSET) Long offset,
+                              @Header(KafkaHeaders.RECEIVED_PARTITION_ID) Integer partitionId,
+                              @Header(KafkaHeaders.RECEIVED_TOPIC) String topic
+    ) throws JsonProcessingException {
         ProdutorDTO produtorDTO = objectMapper.readValue(message, ProdutorDTO.class);
         String data = produtorDTO.getDataCriacao().format(formatter);
 
 
         if (!produtorDTO.getUsuario().equals("${kafka.client-id}")) {
-            producerService.sendReturn(produtorDTO.getUsuario());
+            producerService.sendReturn(produtorDTO.getUsuario(), Topicos.returnOrdinal(produtorDTO.getUsuario()));
         }
 
 

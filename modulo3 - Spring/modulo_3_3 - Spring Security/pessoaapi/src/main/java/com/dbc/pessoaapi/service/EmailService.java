@@ -31,9 +31,9 @@ public class EmailService {
     public void sendSimpleMessage() {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(from);
-        message.setTo("maicon.gerardi@gmail.com");
+        message.setTo("pablo.kapp@gmail.com");
         message.setSubject("subject");
-        message.setText("teste\n minha mensagem \n\nAtt,\nMaicon.");
+        message.setText("teste\n minha mensagem \n\nAtt,\nPablo.");
         emailSender.send(message);
     }
 
@@ -44,9 +44,9 @@ public class EmailService {
                 true);
 
         helper.setFrom(from);
-        helper.setTo("maicon.gerardi@dbccompany.com.br");
+        helper.setTo("pablo.kapp@dbccompany.com.br");
         helper.setSubject("subject");
-        helper.setText("teste\n minha mensagem \n\nAtt,\nMaicon.");
+        helper.setText("teste\n minha mensagem \n\nAtt,\nPablo.");
 
         File file1 = new File("imagem.jpg");
         FileSystemResource file
@@ -63,7 +63,7 @@ public class EmailService {
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 
             mimeMessageHelper.setFrom(from);
-            mimeMessageHelper.setTo("maicon.gerardi@gmail.com");
+            mimeMessageHelper.setTo("pablokapp@gmail.com");
             mimeMessageHelper.setSubject("subject");
             mimeMessageHelper.setText(geContentFromTemplate(), true);
 

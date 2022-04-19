@@ -28,6 +28,47 @@ public enum Topicos {
     }
 
 
+ public static Integer returnOrdinal(String usuario){
+        if (usuario.equals("ana")){
+            ANA.ordinal();
+        }
+        if (usuario.equals("ezequias")){
+            EZEQUIAS.ordinal();
+        }
+        if (usuario.equals("flavio")){
+            FLAVIO.ordinal();
+        }
+        if (usuario.equals("felipe")){
+            FELIPE.ordinal();
+        }
+        if (usuario.equals("gabriel")){
+            GABRIEL.ordinal();
+        }
+        if (usuario.equals("guilherme")){
+            GUILHERME.ordinal();
+        }
+        if (usuario.equals("gustavo")){
+            GUSTAVO.ordinal();
+        }
+        if (usuario.equals("joao")){
+            JOAO.ordinal();
+        }
+        if (usuario.equals("lucas")){
+            LUCAS.ordinal();
+        }
+        if (usuario.equals("luiz")){
+            LUIZ.ordinal();
+        }
+        if (usuario.equals("maicon")){
+            MAICON.ordinal();
+        }
+        if (usuario.equals("nicolas")){
+            NICOLAS.ordinal();
+        }
+     return null;
+ }
+
+
 
 
 }
