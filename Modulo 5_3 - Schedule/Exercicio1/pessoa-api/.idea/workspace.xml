@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05968b7b-4bc1-4d57-b6d7-93d473aeee6d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Modulo 5_3 - Schedule/homework/pessoa-api" beforeDir="false" afterPath="$PROJECT_DIR$/../../Modulo 5_3 - Schedule/homework/pessoa-api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/entity/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/entity/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/repository/PessoaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/repository/PessoaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/service/EmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/service/PessoaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/dbc/vemser/pessoaapi/service/PessoaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -27,7 +31,6 @@
     </option>
   </component>
   <component name="ProjectId" id="27zE6aSSvNyBEEHpvMOfbTxzlIo" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,8 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650314341238</updated>
-      <workItem from="1650314344299" duration="8695000" />
-      <workItem from="1650385368781" duration="10000" />
+      <workItem from="1650314344299" duration="8556000" />
     </task>
     <servers />
   </component>
